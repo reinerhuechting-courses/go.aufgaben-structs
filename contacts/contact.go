@@ -24,18 +24,13 @@ func (contact Contact) String() string {
 
 // Gibt an, ob ein Kontakt einen bestimmten Tag besitzt.
 func (contact Contact) HasTag(tag string) bool {
-	for _, t := range contact.Tags {
-		if t == tag {
-			return true
-		}
-	}
+	// TODO: Durchsuchen Sie die Liste contact.Tags
+	// nach dem tag, der hier übergeben wurde.
 	return false
 }
 
 // Fügt einen Tag zu einem Kontakt hinzu.
 // Soll keine doppelten Einträge erzeugen.
 func (contact *Contact) AddTag(tag string) {
-	if !contact.HasTag(tag) {
-		contact.Tags = append(contact.Tags, tag)
-	}
+	// TODO
 }
