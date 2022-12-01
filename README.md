@@ -1,0 +1,1 @@
+# Übungsaufgaben zu Structs
