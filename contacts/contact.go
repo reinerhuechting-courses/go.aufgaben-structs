@@ -21,3 +21,21 @@ func (contact Contact) String() string {
 		contact.Tags,
 	)
 }
+
+// Gibt an, ob ein Kontakt einen bestimmten Tag besitzt.
+func (contact Contact) HasTag(tag string) bool {
+	for _, t := range contact.Tags {
+		if t == tag {
+			return true
+		}
+	}
+	return false
+}
+
+// Fügt einen Tag zu einem Kontakt hinzu.
+// Soll keine doppelten Einträge erzeugen.
+func (contact *Contact) AddTag(tag string) {
+	if !contact.HasTag(tag) {
+		contact.Tags = append(contact.Tags, tag)
+	}
+}
